@@ -1,0 +1,11 @@
+{{ template "layout" .}}
+{{ define "main" }}
+{{ range .}}
+<div class="text">
+    {{ .Name }}-{{ .Price }}-{{ . }}
+    {{ if lt .Stock 3 }}
+        spek pasaran dan limited
+    {{ end }}
+</div>
+{{ end }}
+{{ end }}
